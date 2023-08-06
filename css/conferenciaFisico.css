@@ -17,13 +17,14 @@ aside{
     flex-direction: column;
     align-items: center;
 }
-aside input[type="button"]{
+aside input[type="button"], aside input[type="text"]{
     width: 212px;
     height: 25px;
     border: 1px solid black;
     background-color: white;
     padding: 0;
     margin-top: 5px;
+    text-align: center;
 }
 aside input[type="button"]:hover{
     cursor: pointer;
@@ -34,6 +35,7 @@ aside input[type="button"]:hover{
     height: 200px;
     width: 200px;
     padding: 5px;
+    margin-top: 5px;
     border: 1px solid black;
     text-align: center;
     justify-content: start;
