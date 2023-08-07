@@ -73,7 +73,34 @@ let dados = [];
 const imprimir = () => {
 	const contagemText = document.getElementById('contagemText');
 	contagemText.style.display = 'none';
-	window.print();
+	const style = `
+		<style>
+			@media print {
+				body{
+					zoom: 65%;
+				}
+				@page {
+					size: A4;
+					margin: 0 2cm 2cm 2cm;
+				}
+				@page :left{
+					margin-left: 2cm;
+				}
+				@page :right{
+					margin-right: 2cm;
+				}
+			}
+		</style>
+	`;
+	const janelaImpressao = window.open('', '_blank');
+	janelaImpressao.document.write(style);
+	janelaImpressao.document.write('<html><head><title>Impressão - Fernando Souto</title><link rel="stylesheet" href="../css/header.css"><link rel="stylesheet" href="../css/conferenciaFisico.css"></head><body>');
+	janelaImpressao.document.write(document.getElementById('body').outerHTML);
+	janelaImpressao.document.write('</body></html>');
+	janelaImpressao.document.close();
+	janelaImpressao.print();
+	janelaImpressao.close();
+	// window.print();
 	contagemText.style.display = 'flex';
 }
 const limpar = () => {
