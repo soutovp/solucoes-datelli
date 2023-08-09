@@ -1,7 +1,6 @@
 main {
 	display: flex;
 	flex-direction: column;
-	width: 85vw;
 	margin: auto;
 }
 
@@ -17,7 +16,7 @@ main section {
 	flex-direction: row;
 	flex-wrap: wrap;
 	gap: 15px;
-
+	justify-content: center;
 }
 
 main section a {
@@ -39,4 +38,17 @@ main section a {
 main section a:hover {
 	background-color: black;
 	color: white;
+}
+
+@media screen and (max-width: 999px) {
+	main section a {
+		width: 90%;
+		font-size: 24px;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	main {
+		width: 85vw;
+	}
 }

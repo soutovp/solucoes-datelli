@@ -210,3 +210,13 @@ function encontrarPalavrasRepetidas(str) {
 
 	return Object.values(palavrasUnicas).join("\n");
 }
+
+
+window.addEventListener('resize', () => {
+	const section = document.getElementsByTagName('aside')[0]
+	if (window.innerWidth <= 999) {
+		if (section.innerHTML == '<hr>') {
+			console.log('tem')
+		}
+	}
+})
