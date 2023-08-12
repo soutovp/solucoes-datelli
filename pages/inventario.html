@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Soluções Datelli - Inventário</title>
+	<link rel="stylesheet" href="../css/header.css">
+	<link rel="stylesheet" href="../css/inventario.css">
+</head>
+
+<body>
+	<header>
+		<a href="../index.html">
+			<img src="../img/Logo-Datelli.svg" alt="Logo Datelli Calçados">
+		</a>
+	</header>
+	<hr>
+	<main>
+		<section>
+			<label for="contagemText">Adicione a contagem</label>
+			<textarea name="contagemText" id="contagemText" cols="30" rows="10"
+				placeholder="Adicioone a contagem aqui!"></textarea>
+			<input type="button" value="Converter Contagem" onclick="manipularTexto()">
+		</section>
+		<section>
+			<h2>Contagem formada</h2>
+			<textarea name="contagemFormada" id="contagemFormada" cols="30" rows="10"
+				placeholder="Aqui entrará a contagem." disabled>asd</textarea>
+			<input type="button" value="Copiar Resultado" onclick="copyToClipboard()">
+		</section>
+	</main>
+	<script src="../js/inventario.js"></script>
+</body>
+
+</html>
